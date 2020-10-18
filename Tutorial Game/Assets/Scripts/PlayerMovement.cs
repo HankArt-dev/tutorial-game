@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
 
     public float forwardForce = 500f;
-    public float moveSpeed = 500f;
+    public float moveSpeed = 50f;
     bool moveRight = false;
     bool moveLeft = false;
 
@@ -43,12 +43,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (moveRight == true)
         {
-            rb.AddForce(moveSpeed * Time.deltaTime, 0, 0);
+            rb.AddForce(moveSpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if (moveLeft == true)
         {
-            rb.AddForce(-moveSpeed * Time.deltaTime, 0, 0);
+            rb.AddForce(-moveSpeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
