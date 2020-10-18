@@ -12,10 +12,7 @@ public class FollowPlayer : MonoBehaviour
     {
         transform.position = player.position + offset;
 
-        if (player.position.y <= -50)
-        {
-            transform.LookAt(ground);
-        }
+        
         
     }
 }
